@@ -1,9 +1,10 @@
-94852df15e72d590a864ec6437bf9691 *DESCRIPTION
+b59b8e3004d34f3ee9a64eb254c5f97f *DESCRIPTION
 59656e603778c11130dce10cb4aefb4f *LISCENSE
-a9d199290ef29b9d0a30366fdaedb0d2 *NAMESPACE
-5c8f5ee06dd408e510886ec00c0bab64 *NEWS
+e3fe2d4ca7b78f9b5e737e03b1238f9a *NAMESPACE
+b1155ff8c5be4dce7b861265708d663b *NEWS
 583cb33ebcd40651d9276f01610f7548 *R/MapToInterval.r
-55aea1ded50806b52ddaf975714162ee *R/comparisons.r
+b6e43d22bdf84176701d287a86a4a3f2 *R/buildFormula.r
+ef2015d544e5b9e927d5639a49abdc97 *R/comparisons.r
 d2fa6f75f0155b2d5924fe896dd2cb1b *R/corner.r
 8bd015465a4c6d70eb7c0b6ca9f457f0 *R/hartigan.r
 8e84d2d8690037b6bc4bd774786b946a *R/regex.r
@@ -16,6 +17,7 @@ b640172a5d9395da1a1ff9184f386ec3 *man/ComputeHartigan.Rd
 cec32a3967674f53810df694a104230e *man/PlotHartigan.Rd
 a1598d3dda2d1b82be572dacd754a32d *man/bottomleft.Rd
 1fe2f1d180769beabde1f0a6da1ee06c *man/bottomright.Rd
+bbf5f3a29d0b590fc5fbe1a690682b68 *man/build.formula.Rd
 e50110ebc93091985799728353a658a2 *man/compare.list.Rd
 09c786f7c97c3f4be9f5fc16a8c12d73 *man/corner.Rd
 4070ca7e02f625d103b7145f6440973a *man/left.Rd

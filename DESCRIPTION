@@ -1,7 +1,7 @@
 Package: useful
 Type: Package
 Title: A collection of handy, useful functions
-Version: 1.1.3
+Version: 1.1.4
 Date: 2011-10-02
 Author: Jared P. Lander
 Maintainer: <packages@jaredlander.com>
@@ -12,6 +12,7 @@ Depends: ggplot2, plyr
 LazyLoad: yes
 Collate: 'corner.r' 'hartigan.r' 'MapToInterval.r' 'regex.r'
         'subspecials.r' 'useful-package.r' 'comparisons.r'
-Packaged: 2012-03-12 00:57:05 UTC; Jared
+        'buildFormula.r'
+Packaged: 2012-03-19 21:31:13 UTC; Jared
 Repository: CRAN
-Date/Publication: 2012-03-12 15:27:18
+Date/Publication: 2012-03-20 05:53:06
