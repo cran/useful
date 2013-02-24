@@ -1,0 +1,60 @@
+\name{build.x}
+\alias{build.x}
+\title{build.x}
+\usage{
+build.x(formula, data, contrasts = TRUE, sparse = FALSE)
+}
+\arguments{
+  \item{formula}{A formula}
+
+  \item{data}{A data.frame}
+
+  \item{contrasts}{Logical indicating whether a factor's
+  base level is removed.  Can be either one single value
+  applied to every factor or a value for each factor.
+  Values will be recycled if necessary.}
+
+  \item{sparse}{Logical indicating if result should be
+  sparse.  Currently not used.}
+}
+\value{
+A matrix of the predictor variables specified in the
+formula
+}
+\description{
+Build the x matrix for a glmnet model
+}
+\details{
+Given a formula and a data.frame build the predictor matrix
+}
+\examples{
+require(ggplot2)
+head(mpg)
+head(build.x(hwy ~ class + cyl + year, data=mpg))
+
+testFrame <- data.frame(First=sample(1:10, 20, replace=TRUE),
+Second=sample(1:20, 20, replace=TRUE),
+Third=sample(1:10, 20, replace=TRUE),
+Fourth=factor(rep(c("Alice","Bob","Charlie","David"), 5)),
+Fifth=ordered(rep(c("Edward","Frank","Georgia","Hank","Isaac"), 4)),
+Sixth=factor(rep(c("a", "b"), 10)), stringsAsFactors=F)
+head(build.x(First ~ Second + Fourth + Sixth, testFrame,
+contrasts=c("Fourth"=TRUE, "Fifth"=FALSE, "Sixth"=TRUE)))
+head(build.x(First ~ Second + Fourth + Fifth + Sixth, testFrame,
+contrasts=c(Fourth=TRUE, Fifth=FALSE, Sixth=TRUE)))
+head(build.x(First ~ Second + Fourth + Fifth + Sixth, testFrame, contrasts=TRUE))
+head(build.x(First ~ Second + Fourth + Fifth + Sixth, testFrame,
+contrasts=FALSE))
+head(build.x(First ~ Second + Fourth + Fifth + Sixth - 1, testFrame,
+contrasts=TRUE))
+head(build.x(First ~ Second + Fourth + Fifth + Fourth*Sixth, testFrame, contrasts=TRUE))
+head(build.x(First ~ Second + Fourth + Fifth + Third*Sixth, testFrame, contrasts=TRUE))
+#' head(build.x(First ~ Second + Fourth + Fifth + Fourth*Sixth, testFrame, contrasts=FALSE))
+head(build.x(First ~ Second + Fourth + Fifth + Third*Sixth, testFrame, contrasts=FALSE))
+
+## if contrasts is a list then you can specify just certain factors
+}
+\author{
+Jared P. Lander
+}
+

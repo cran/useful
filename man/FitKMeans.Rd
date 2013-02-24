@@ -2,10 +2,9 @@
 \alias{FitKMeans}
 \title{Fit a series of kmeans clusterings and compute Hartigan's Number}
 \usage{
-  FitKMeans(x, max.clusters = 12L, spectral = FALSE,
-    nstart = 1L, iter.max = 10L,
-    algorithm = c("Hartigan-Wong", "Lloyd", "Forgy", "MacQueen"),
-    seed = NULL)
+FitKMeans(x, max.clusters = 12L, spectral = FALSE, nstart = 1L,
+  iter.max = 10L, algorithm = c("Hartigan-Wong", "Lloyd", "Forgy",
+  "MacQueen"), seed = NULL)
 }
 \arguments{
   \item{x}{The data, numeric, either a matrix or
@@ -31,22 +30,21 @@
   before each application of the kmeans algorithm}
 }
 \value{
-  A data.frame consisting of columns, for the number of
-  clusters, the Hartigan Number and whether that cluster
-  should be added, based on Hartigan's Number.
+A data.frame consisting of columns, for the number of
+clusters, the Hartigan Number and whether that cluster
+should be added, based on Hartigan's Number.
 }
 \description{
-  Given a numeric dataset this function fits a series of
-  kmeans clusterings with increasing number of centers.
-  k-means is compared to k+1-means using Hartigan's Number
-  to determine if the k+1st cluster should be added.
+Given a numeric dataset this function fits a series of
+kmeans clusterings with increasing number of centers.
+k-means is compared to k+1-means using Hartigan's Number to
+determine if the k+1st cluster should be added.
 }
 \details{
-  A consecutive series of kmeans is computed with
-  increasing k (number of centers).  Each result for k and
-  k+1 are compared using Hartigan's Number.  If the number
-  is greater than 10, it is noted that having k+1 clusters
-  is of value.
+A consecutive series of kmeans is computed with increasing
+k (number of centers).  Each result for k and k+1 are
+compared using Hartigan's Number.  If the number is greater
+than 10, it is noted that having k+1 clusters is of value.
 }
 \examples{
 data(iris)
@@ -54,13 +52,13 @@ hartiganResults <- FitKMeans(iris[, -ncol(iris)])
 PlotHartigan(hartiganResults)
 }
 \author{
-  Jared P. Lander www.jaredlander.com
+Jared P. Lander www.jaredlander.com
 }
 \references{
-  http://www.stat.columbia.edu/~madigan/DM08/descriptive.ppt.pdf
+http://www.stat.columbia.edu/~madigan/DM08/descriptive.ppt.pdf
 }
 \seealso{
-  \code{\link{kmeans}} \code{\link{PlotHartigan}}
+\code{\link{kmeans}} \code{\link{PlotHartigan}}
 }
 \keyword{cluster}
 \keyword{clustering}

@@ -2,21 +2,21 @@
 \alias{binary.flip}
 \title{binary.flip}
 \usage{
-  binary.flip(x)
+binary.flip(x)
 }
 \arguments{
   \item{x}{A vector of 0/1 numbers.}
 }
 \value{
-  X with 0's flipped to 1's and 1's flipped to 0's
+X with 0's flipped to 1's and 1's flipped to 0's
 }
 \description{
-  Flip binary numbers
+Flip binary numbers
 }
 \examples{
 binary.flip(c(1,1,0,1,0,0,1))
 }
 \author{
-  Jared P. Lander
+Jared P. Lander
 }
 

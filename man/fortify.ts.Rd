@@ -2,8 +2,7 @@
 \alias{fortify.ts}
 \title{fortify.ts}
 \usage{
-  \method{fortify}{ts} (model, data = NULL,
-    name = as.character(m[[2]]), ...)
+\method{fortify}{ts}(model, data = NULL, name = as.character(m[[2]]), ...)
 }
 \arguments{
   \item{model}{A \code{\link{ts}} object.}
@@ -18,18 +17,18 @@
   \item{\dots}{Further arguments.}
 }
 \value{
-  \code{\link{data.frame}} for plotting with ggplot.
+\code{\link{data.frame}} for plotting with ggplot.
 }
 \description{
-  Fortify a ts object.
+Fortify a ts object.
 }
 \details{
-  Prepares a ts object for plotting with ggplot.
+Prepares a ts object for plotting with ggplot.
 }
 \examples{
 fortify(sunspot.year)
 }
 \author{
-  Jared P. Lander
+Jared P. Lander
 }
 

@@ -2,7 +2,7 @@
 \alias{fortify.kmeans}
 \title{fortify.kmeans}
 \usage{
-  \method{fortify}{kmeans} (model, data = NULL, ...)
+\method{fortify}{kmeans}(model, data = NULL, ...)
 }
 \arguments{
   \item{model}{\code{\link{kmeans}} model}
@@ -12,19 +12,18 @@
   \item{\dots}{Not Used}
 }
 \value{
-  The original data with extra columns: \item{.x}{The
-  projected x position.} \item{.y}{The projected y
-  position.} \item{.Cluster}{The cluster that point belongs
-  to.}
+The original data with extra columns: \item{.x}{The
+projected x position.} \item{.y}{The projected y position.}
+\item{.Cluster}{The cluster that point belongs to.}
 }
 \description{
-  Fortify a kmeans model with its data
+Fortify a kmeans model with its data
 }
 \details{
-  Prepares a kmeans object to be plotted using
-  \code{\link{cmdscale}} to compute the projected x/y
-  coordinates.  If \code{data} is not provided, then just
-  the center points are calculated.
+Prepares a kmeans object to be plotted using
+\code{\link{cmdscale}} to compute the projected x/y
+coordinates.  If \code{data} is not provided, then just the
+center points are calculated.
 }
 \examples{
 k1 <- kmeans(x=iris[, 1:4], centers=3)
@@ -34,9 +33,9 @@ hold2 <- fortify(k1)
 head(hold2)
 }
 \author{
-  Jared P. Lander
+Jared P. Lander
 }
 \seealso{
-  kmeans fortify ggplot plot.kmeans
+kmeans fortify ggplot plot.kmeans
 }
 

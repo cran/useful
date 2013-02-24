@@ -2,7 +2,7 @@
 \alias{fortify.acf}
 \title{fortify.acf}
 \usage{
-  \method{fortify}{acf} (model, data = NULL, ...)
+\method{fortify}{acf}(model, data = NULL, ...)
 }
 \arguments{
   \item{model}{An \code{\link{acf}} object.}
@@ -13,19 +13,19 @@
   \item{\dots}{Other arguments}
 }
 \value{
-  \code{\link{data.frame}} for plotting with ggplot.
+\code{\link{data.frame}} for plotting with ggplot.
 }
 \description{
-  Fortify an acf/pacf object
+Fortify an acf/pacf object
 }
 \details{
-  Prepares acf (and pacf) objects for plotting with ggplot.
+Prepares acf (and pacf) objects for plotting with ggplot.
 }
 \examples{
 fortify(acf(sunspot.year, plot=FALSE))
 fortify(pacf(sunspot.year, plot=FALSE))
 }
 \author{
-  Jared P. Lander
+Jared P. Lander
 }
 

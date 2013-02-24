@@ -2,7 +2,7 @@
 \alias{compare.list}
 \title{List Comparison}
 \usage{
-  compare.list(a, b)
+compare.list(a, b)
 }
 \arguments{
   \item{a}{A List}
@@ -10,14 +10,14 @@
   \item{b}{A List}
 }
 \value{
-  A vector with a logical indicator for equality of each
-  element author Jared P. Lander www.jaredlander.com
+A vector with a logical indicator for equality of each
+element author Jared P. Lander www.jaredlander.com
 }
 \description{
-  List Comparison
+List Comparison
 }
 \details{
-  Compare elements of two equal length lists.
+Compare elements of two equal length lists.
 }
 \examples{
 vect <- c(mean, mode, mean)

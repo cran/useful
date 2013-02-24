@@ -2,9 +2,8 @@
 \alias{shift.column}
 \title{shift.column}
 \usage{
-  shift.column(data, columns,
-    newNames = sprintf("\%s.Shifted", columns), len = 1L,
-    up = TRUE)
+shift.column(data, columns, newNames = sprintf("\%s.Shifted", columns),
+  len = 1L, up = TRUE)
 }
 \arguments{
   \item{data}{\code{\link{data.frame}}}
@@ -23,15 +22,14 @@
   or down.}
 }
 \value{
-  \code{\link{data.frame}} with the specified columns
-  shifted.
+\code{\link{data.frame}} with the specified columns
+shifted.
 }
 \description{
-  Shift a column of data
+Shift a column of data
 }
 \details{
-  Shifts a column of data up or down a certain number of
-  rows
+Shifts a column of data up or down a certain number of rows
 }
 \examples{
 myData <- data.frame(Upper=LETTERS, lower=letters)
@@ -39,6 +37,6 @@ shift.column(data=myData, columns="lower")
 shift.column(data=myData, columns="lower", len=2)
 }
 \author{
-  Jared P. Lander
+Jared P. Lander
 }
 

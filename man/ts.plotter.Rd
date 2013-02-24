@@ -2,8 +2,8 @@
 \alias{ts.plotter}
 \title{ts.plotter}
 \usage{
-  ts.plotter(data, time = NULL, title = "Series Plot",
-    xlab = "Time", ylab = "Rate")
+ts.plotter(data, time = NULL, title = "Series Plot", xlab = "Time",
+  ylab = "Rate")
 }
 \arguments{
   \item{data}{A \code{\link{ts}} object to be plotted.}
@@ -19,18 +19,18 @@
   \item{ylab}{Y-axis label.}
 }
 \value{
-  A ggplot object
+A ggplot object
 }
 \description{
-  Plot a ts object
+Plot a ts object
 }
 \details{
-  Fortifies, then plots a \code{\link{ts}} object.
+Fortifies, then plots a \code{\link{ts}} object.
 }
 \examples{
 ts.plotter(sunspot.year)
 }
 \author{
-  Jared P. Lander
+Jared P. Lander
 }
 

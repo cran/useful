@@ -2,9 +2,8 @@
 \alias{PlotHartigan}
 \title{Plot a series of Hartigan's Numbers}
 \usage{
-  PlotHartigan(hartigan, title = "Hartigan's Rule",
-    smooth = FALSE, linecolor = "grey", linetype = 2L,
-    linesize = 1L, minor = TRUE)
+PlotHartigan(hartigan, title = "Hartigan's Rule", smooth = FALSE,
+  linecolor = "grey", linetype = 2L, linesize = 1L, minor = TRUE)
 }
 \arguments{
   \item{hartigan}{The results from \code{\link{FitKMeans}}}
@@ -25,16 +24,16 @@
   plotted}
 }
 \value{
-  a ggplot object
+a ggplot object
 }
 \description{
-  After fitting a series of Hartigan's Numbers (see
-  \code{\link{FitKMeans}}) this will plot the results so it
-  is easy to visualize
+After fitting a series of Hartigan's Numbers (see
+\code{\link{FitKMeans}}) this will plot the results so it
+is easy to visualize
 }
 \details{
-  Displays a graphical representation of the results of
-  \code{\link{FitKMeans}}
+Displays a graphical representation of the results of
+\code{\link{FitKMeans}}
 }
 \examples{
 data(iris)
@@ -42,14 +41,14 @@ hartiganResults <- FitKMeans(iris[, -ncol(iris)])
 PlotHartigan(hartiganResults)
 }
 \author{
-  Jared P. Lander www.jaredlander.com
+Jared P. Lander www.jaredlander.com
 }
 \references{
-  #'
-  http://www.stat.columbia.edu/~madigan/DM08/descriptive.ppt.pdf
+#'
+http://www.stat.columbia.edu/~madigan/DM08/descriptive.ppt.pdf
 }
 \seealso{
-  \code{\link{kmeans}} \code{\link{FitKMeans}}
+\code{\link{kmeans}} \code{\link{FitKMeans}}
 }
 \keyword{cluster}
 \keyword{clustering}

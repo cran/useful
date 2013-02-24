@@ -4,6 +4,6 @@
 \alias{useful-package}
 \title{Helper functions}
 \description{
-  A collection of handy, helper functions
+A collection of handy, helper functions
 }
 

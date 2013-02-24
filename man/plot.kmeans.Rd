@@ -2,11 +2,10 @@
 \alias{plot.kmeans}
 \title{plot.kmeans}
 \usage{
-  \method{plot}{kmeans} (x, data = NULL, class = NULL,
-    legend.position = c("right", "bottom", "left", "top", "none"),
-    title = "K-Means Results",
-    xlab = "Principal Component 1",
-    ylab = "Principal Component 2", ...)
+\method{plot}{kmeans}(x, data = NULL, class = NULL,
+  legend.position = c("right", "bottom", "left", "top", "none"),
+  title = "K-Means Results", xlab = "Principal Component 1",
+  ylab = "Principal Component 2", ...)
 }
 \arguments{
   \item{x}{A \code{\link{kmeans}} object.}
@@ -29,15 +28,15 @@
   \item{\dots}{Not Used.}
 }
 \value{
-  A ggplot object
+A ggplot object
 }
 \description{
-  Plot the results from a k-means object
+Plot the results from a k-means object
 }
 \details{
-  Plots the results of k-means with color-coding for the
-  cluster membership.  If \code{data} is not provided, then
-  just the center points are calculated.
+Plots the results of k-means with color-coding for the
+cluster membership.  If \code{data} is not provided, then
+just the center points are calculated.
 }
 \examples{
 k1 <- kmeans(x=iris[, 1:4], centers=3)
@@ -45,9 +44,9 @@ plot(k1)
 plot(k1, data=iris)
 }
 \author{
-  Jared P. Lander
+Jared P. Lander
 }
 \seealso{
-  kmeans fortify ggplot plot.kmeans
+kmeans fortify ggplot plot.kmeans
 }
 

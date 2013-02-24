@@ -2,7 +2,7 @@
 \alias{build.formula}
 \title{Formula Builder}
 \usage{
-  build.formula(lhs, rhs)
+build.formula(lhs, rhs)
 }
 \arguments{
   \item{lhs}{Character vector for left side of formula}
@@ -10,16 +10,15 @@
   \item{rhs}{Character vector for right side of formula}
 }
 \value{
-  A formula object
+A formula object
 }
 \description{
-  Formula Builder
+Formula Builder
 }
 \details{
-  Builds a formula easily given the left and right hand
-  sides.  Right now it only handles additive formulas and
-  not interactions unless that is specified in the
-  character.
+Builds a formula easily given the left and right hand
+sides.  Right now it only handles additive formulas and not
+interactions unless that is specified in the character.
 }
 \examples{
 build.formula("Y", "X")
@@ -28,9 +27,9 @@ build.formula("Z", c("X", "Q"))
 build.formula(c("Y", "Z"), c("X", "Q"))
 }
 \author{
-  Jared P. Lander www.jaredlander.com
+Jared P. Lander www.jaredlander.com
 }
 \seealso{
-  formula as.formula
+formula as.formula
 }
 

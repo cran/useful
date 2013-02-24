@@ -1,11 +1,11 @@
-\name{plot.ts}
-\alias{plot.ts}
-\title{plot.ts}
+\name{plotTimesSeries}
+\alias{plot.times.series}
+\alias{plotTimesSeries}
+\title{plotTimesSeries}
 \usage{
-  \method{plot}{ts} (x, time = NULL, acf = FALSE,
-    lag.max = NULL, na.action = na.fail, demean = TRUE,
-    title = sprintf("\%s Plot", name), xlab = "Time",
-    ylab = name, ...)
+plotTimesSeries(x, time = NULL, acf = FALSE, lag.max = NULL,
+  na.action = na.fail, demean = TRUE, title = sprintf("\%s Plot", name),
+  xlab = "Time", ylab = name, ...)
 }
 \arguments{
   \item{x}{a \code{\link{ts}} object.}
@@ -38,23 +38,23 @@
   \item{\dots}{Further arguments.}
 }
 \value{
-  A ggplot object if \code{acf} is \code{FALSE}, otherwise
-  \code{TRUE} indicating success.
+A ggplot object if \code{acf} is \code{FALSE}, otherwise
+\code{TRUE} indicating success.
 }
 \description{
-  Plot ts object
+Plot ts object
 }
 \details{
-  Plot a ts object and, if desired, it's acf and pacf.
+Plot a ts object and, if desired, it's acf and pacf.
 }
 \examples{
 plot(sunspot.year)
 plot(sunspot.year, acf=TRUE)
 }
 \author{
-  Jared P. Lander
+Jared P. Lander
 }
 \seealso{
-  ts.plotter plot.acf fortify.ts
+ts.plotter plot.acf fortify.ts
 }
 

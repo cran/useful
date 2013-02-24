@@ -1,3 +1,16 @@
+Version 1.1.8
+-----------------------------------------------------------------------------------------------------
+Added functionality to build.x to control contrasts.
+Fixed bug in build.x where it never returned the intercept.
+
+Version 1.1.7
+-----------------------------------------------------------------------------------------------------
+Scale formatters for ggplot2.
+Functions to build x and y matrices based on a formula.
+Functions to build x and y matrices based on a formula.
+Function to ensure data in build.x and build.y is not a matrix or array.
+Function to check interval membership.
+
 Version 1.1.6
 -----------------------------------------------------------------------------------------------------
 Updated to reflect ggplot2_0.9.2 changes.
