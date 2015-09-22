@@ -7,14 +7,14 @@
 #' Prepares a kmeans object to be plotted using \code{\link{cmdscale}} to compute the projected x/y coordinates.  If \code{data} is not provided, then just the center points are calculated.
 #' 
 #' @aliases fortify.kmeans
+#' @export
 #' @export fortify.kmeans
+#' @importFrom stats cmdscale dist
 #' @author Jared P. Lander
 #' @seealso kmeans fortify ggplot plot.kmeans
 #' @param model \code{\link{kmeans}} model
 #' @param data Data used to fit the model
 #' @param \dots Not Used
-#' @method fortify kmeans
-#' @S3method fortify kmeans
 #' @return The original data with extra columns:
 #'      \item{.x}{The projected x position.}
 #'      \item{.y}{The projected y position.}
@@ -61,11 +61,10 @@ fortify.kmeans <- function(model, data=NULL, ...)
 #' Plots the results of k-means with color-coding for the cluster membership.  If \code{data} is not provided, then just the center points are calculated.
 #' 
 #' @aliases plot.kmeans
+#' @export
 #' @export plot.kmeans
 #' @author Jared P. Lander
 #' @seealso kmeans fortify ggplot plot.kmeans
-#' @method plot kmeans
-#' @S3method plot kmeans
 #' @param x A \code{\link{kmeans}} object.
 #' @param data The data used to kit the \code{\link{kmeans}} object.
 #' @param class Character name of the "true" classes of the data.

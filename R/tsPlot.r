@@ -31,9 +31,7 @@ vplayout <- function(x, y)
 #' 
 #' @author Jared P. Lander
 #' @aliases fortify.ts
-#' @export fortify.ts
-#' @S3method fortify ts
-#' @method fortify ts
+#' @export
 #' @return \code{\link{data.frame}} for plotting with ggplot.
 #' @param model A \code{\link{ts}} object.
 #' @param data A vector of the same length of \code{x} that specifies the time component of each element of \code{x}.
@@ -111,9 +109,7 @@ ts.plotter <- function(data, time=NULL,
 #' 
 #' @author Jared P. Lander
 #' @aliases fortify.acf
-#' @export fortify.acf
-#' @S3method fortify acf
-#' @method fortify acf
+#' @export
 #' @return \code{\link{data.frame}} for plotting with ggplot. 
 #' @param model An \code{\link{acf}} object.
 #' @param data Not used.  Just for consistency with the fortify method.
@@ -147,8 +143,7 @@ fortify.acf <- function(model, data=NULL, ...)
 #' @author Jared P. Lander
 #' @aliases plot.acf
 #' @export plot.acf
-#' @S3method plot acf
-#' @method plot acf
+#' @export
 #' @return A ggplot object.
 #' @param x An \code{\link{acf}} object.
 #' @param xlab X-axis label.
@@ -180,6 +175,18 @@ plot.acf <- function(x,
         labs(title=title, x=xlab, y=ylab)
 }
 
+#' @title plot
+#' @description Overwitten plot generic so that plot.acf can be defined in this package
+#' @details Overwitten plot generic so that plot.acf can be defined in this package
+#' @author Jared P. Lander
+#' @param x Object to be plotted
+#' @param \dots Further arguments
+#' @return A plot
+#' 
+plot <- function(x, ...)
+{
+    UseMethod('plot')
+}
 
 #' plotTimesSeries
 #' 
@@ -190,6 +197,7 @@ plot.acf <- function(x,
 #' @aliases plot.times.series
 #' @author Jared P. Lander
 #' @export plotTimesSeries
+#' @importFrom stats na.fail
 # @S3method plot ts
 # @method plot ts
 #' @import grid
