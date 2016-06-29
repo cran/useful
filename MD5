@@ -1,7 +1,7 @@
-2deee221e97ae077b5ae1580c3612307 *DESCRIPTION
+8ae6f3b5094f18d0be36397ea0aa1058 *DESCRIPTION
 40acc0e5cb9621dad5dc2042ab311916 *LICENSE
-bcd9616762821906ec6f5ad324c5208f *NAMESPACE
-73e992ab457f76ee7ecd1acde384422c *NEWS.md
+0098132017a148d3f57eddc62684ce40 *NAMESPACE
+d9f00db5d2590ce2d722d282287df16b *NEWS.md
 6f0aa411eee2a4a77d5746f230dd4817 *R/ColumnReorder.r
 583cb33ebcd40651d9276f01610f7548 *R/MapToInterval.r
 6cbfe3e7d2bfc325339951912ac98623 *R/binary.flip.r
@@ -18,14 +18,16 @@ a26ee187a58420cce47c8e980d90914d *R/hartigan.r
 0a5e3e56af585e98a630fed82088966b *R/indices.r
 c8be242e9b1e45362c0fd132ce52ac2c *R/intervals.r
 751378006aea30938777fb87875e08f1 *R/kmeansPlotting.r
+98eb41491d97d61c64cbdd3fe9b75941 *R/knitting.r
 3e95813d2b7a786970db35be37d51189 *R/reclass.r
 bb3418c96b2b648e5728f9f77e5dbd24 *R/regex.r
 dc098c5772055a8004086eddeea9e8da *R/shiftColumn.r
 23754c4f774e48887d32ba6480b972f6 *R/subMultiple.r
 c26ca21aa3ec402d4c860daefad35be7 *R/subspecials.r
 d4b278297dbe44ba22255b34b924091d *R/tsPlot.r
+60034cfa93d2239ee269d3be516fc9b2 *R/unique.r
 700151e40929b26d23a387993c6ed363 *R/useful-package.r
-5d723a521f3ef71257e572c50cf3b2a9 *README.md
+2f07b020a17af97ff6c66d6e43818d81 *README.md
 74bae2fc6e7ecffbbbd98169bf8d0801 *man/ComputeHartigan.Rd
 4f25442d04be40738d3807954f43dc36 *man/FitKMeans.Rd
 28bc7de9b3fdadcfc1c445a47c86ff3a *man/ForceDataFrame.Rd
@@ -79,6 +81,7 @@ ebc534ba214d442018e2bee7d9149bfb *man/simple.impute.tbl_df.Rd
 c21ba54b2b7d09bc57ee360fe2885fa6 *man/topleft.Rd
 b984546074df99c55bc56e94733dfbb0 *man/topright.Rd
 e640aa0ca69ba5c13f9ed6c218bf9424 *man/ts.plotter.Rd
+f42ea2b2ddc896099e3617b4f1f3100d *man/uniqueBidirection.Rd
 6276ff0e7d608e0f26d6de3f880f7dda *man/upper.case.Rd
 c5d54ad89392b588a36623e9a3564848 *man/useful.Rd
 6aba6c749b53e223815a1bf678efaeea *man/vplayout.Rd
@@ -90,6 +93,7 @@ ce552513a073800234b01c2fd5bbf453 *tests/testthat/test-coordinates.R
 74e6b60c23b12a34349701f564772093 *tests/testthat/test-indices.R
 ffe8095f36a2cf3b03714c6acb5f231f *tests/testthat/test-move-cols.r
 301ec5ba4c9638a96881686e2c66740b *tests/testthat/test-reclass.r
-669102f9421233d4b89883a18bbe5402 *tests/testthat/test-simple-impute.r
+0961488db80440a2ea15a4d9a1563e73 *tests/testthat/test-simple-impute.r
 c3ed45e9acefece53a0bb74b0a74d2c2 *tests/testthat/test-sub-specials.r
 4d66f370c688d926856636ef93a99880 *tests/testthat/test-subMultiple.R
+6b29a193cbc835ede6c91cc0429f7263 *tests/testthat/test-unique.R
