@@ -32,4 +32,3 @@ tryCatch(compare.list(vect, vect3), error=function(e) print("Caught error"))
 
 }
 \keyword{list}
-

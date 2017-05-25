@@ -22,7 +22,7 @@ bottomright(x, r = 5L, c = 5L, ...)
 Display the bottom right corner of a rectangular data set
 }
 \details{
-Displays the bottom right corner of a retangular data set.
+Displays the bottom right corner of a rectangular data set.
 
 This is a wrapper function for \code{\link{corner}}
 }
@@ -33,11 +33,11 @@ head(diamonds)      # displays all columns
 bottomright(diamonds)    # displays last 5 rows and only the last 5 columns
 
 }
-\author{
-Jared P. Lander www.jaredlander.com
-}
 \seealso{
 \code{\link{head}} \code{\link{tail}} \code{\link{corner}} \code{\link{topright}} \code{\link{bottomleft}} \code{\link{topleft}} \code{\link{left}} \code{\link{right}}
+}
+\author{
+Jared P. Lander www.jaredlander.com
 }
 \keyword{corner}
 \keyword{display}
@@ -45,4 +45,3 @@ Jared P. Lander www.jaredlander.com
 \keyword{subsection}
 \keyword{tail}
 \keyword{view}
-

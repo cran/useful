@@ -22,7 +22,7 @@ topleft(x, r = 5L, c = 5L, ...)
 Display the top left corner of a rectangular data set
 }
 \details{
-Displays the top left corner of a retangular data set.
+Displays the top left corner of a rectangular data set.
 
 This is a wrapper function for \code{\link{corner}}
 }
@@ -33,11 +33,11 @@ head(diamonds)      # displays all columns
 topleft(diamonds)    # displays first 5 rows and only the first 5 columns
 
 }
-\author{
-Jared P. Lander www.jaredlander.com
-}
 \seealso{
 \code{\link{head}} \code{\link{tail}} \code{\link{corner}} \code{\link{topright}} \code{\link{bottomleft}} \code{\link{bottomright}} \code{\link{left}} \code{\link{right}}
+}
+\author{
+Jared P. Lander www.jaredlander.com
 }
 \keyword{corner}
 \keyword{display}
@@ -45,4 +45,3 @@ Jared P. Lander www.jaredlander.com
 \keyword{subsection}
 \keyword{tail}
 \keyword{view}
-
