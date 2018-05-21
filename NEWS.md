@@ -1,3 +1,8 @@
+# Version 1.2.4
+Complete unit test coverage.
+Added point size option in `plot.kmeans`.
+Added function for computing a single time difference with an informative message.
+
 # Version 1.2.3
 Added support for sparce matrices in `build.x`
 
