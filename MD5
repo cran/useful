@@ -1,7 +1,7 @@
-7a685a830a90683172a0108f96283e60 *DESCRIPTION
+6d3e6214eae14f3cc9bc3fc80c08c3be *DESCRIPTION
 f9abcf5410e2dac8d8dc6f334bc7056b *LICENSE
-704ebf582b84cd51b9e21d231d029cb5 *NAMESPACE
-5f1e7c3d167b4e7854555b79a40ad2d1 *NEWS.md
+2e06017f04a2f5a6f62376b71697c48c *NAMESPACE
+7ea31ad6e315c45810d9f6d0792d5958 *NEWS.md
 a487ec136f0304f2d581aaba05e36429 *R/ColumnReorder.r
 583cb33ebcd40651d9276f01610f7548 *R/MapToInterval.r
 6cbfe3e7d2bfc325339951912ac98623 *R/binary.flip.r
@@ -11,7 +11,7 @@ d6eba7cf35d450772daa4da9b9a99f0d *R/checkCase.r
 860521551fbb142a7b5430f421ba275f *R/classCheck.r
 767b03cd65e52149e236faaef29a36ab *R/comparisons.r
 209ebd640c815d71bb584af48c1112dd *R/coordinates.r
-991b6c7752efbf6d6b422dde2b78c6dc *R/corner.r
+e3bf37bfbe102a51c3bd258774c6724b *R/corner.r
 fa791b41d7dcfe76947ac4aa0de43b5f *R/formatters.r
 a26ee187a58420cce47c8e980d90914d *R/hartigan.r
 0818f8e40c345565373905796fb08fdf *R/impute.r
@@ -25,7 +25,7 @@ dc098c5772055a8004086eddeea9e8da *R/shiftColumn.r
 9a2ea4ee1d2fa48b138e24142eea967d *R/subMultiple.r
 c26ca21aa3ec402d4c860daefad35be7 *R/subspecials.r
 597674c9bb405e1c18db6b43f0ae286d *R/time.single.R
-954bc70abbe21044fb91b5204276c668 *R/tsPlot.r
+9fec0a1c75a4a59cde196b588577ffb0 *R/tsPlot.r
 7522ef188bd82427803f29ab224680c2 *R/unique.r
 700151e40929b26d23a387993c6ed363 *R/useful-package.r
 2f07b020a17af97ff6c66d6e43818d81 *README.md
@@ -35,6 +35,7 @@ c26ca21aa3ec402d4c860daefad35be7 *R/subspecials.r
 982781d4c6ff08e296a0e41d0f7dde2b *man/MapToInterval.Rd
 dfaffa1647929f79338b13f4759fda86 *man/PlotHartigan.Rd
 1853d599017d3a1eede9da98c558f97e *man/WhichCorner.Rd
+fc40701f663e1ec929fc6dd0228f9dfd *man/autoplot.acf.Rd
 d116a42d97e1424990f1919d444b5cd0 *man/binary.flip.Rd
 e7c4ad07e8d74006e8b05a0565fa2dbc *man/bottomleft.Rd
 c2f481306cc087feaa09f5bade1cf309 *man/bottomright.Rd
@@ -44,9 +45,9 @@ c8a6b0c165f4781d4c7ca24993bed879 *man/build.x.Rd
 4da3d8d23c567231ff705965c8757e76 *man/cart2pol.Rd
 b14c04d8489acb0c22b1272d91e080e0 *man/classdf.Rd
 69f0f92297185ccee328efdc4082b384 *man/colsToFront.Rd
-c5e68529127714bec70d79d069c0daeb *man/compare.list.Rd
+439ccf5b7aa4803db409d93a5eec9274 *man/compare.list.Rd
 58c6a3de24fd592f768c258b34ef2d83 *man/constant.Rd
-70dad4e5dffa260da618e5dc654e7029 *man/corner.Rd
+c672d6f33793878e9f6dc8301c0d9982 *man/corner.Rd
 f4d16da00009b34fa501e4f283fb9bfb *man/find.case.Rd
 423357da355560bd69d615726c7ae695 *man/fortify.acf.Rd
 597e227ea0fc2679c1d270d06e46daa7 *man/fortify.kmeans.Rd
@@ -63,8 +64,7 @@ a79cff01ae9707b600c214583bb2a292 *man/multiple.dollar.Rd
 8b82483e8e8e0130566f0850feeab3d9 *man/multiple.identity.Rd
 f2ef5a2498a0d3bcec8a9b649a8413ff *man/multiple_format.Rd
 2f51250f82a65b5db907d80e640704ec *man/numeric.case.Rd
-5e607f3e5dd0d0bff07c0de1707d0997 *man/plot.Rd
-eefe3353af8ce34b8fbd69f066c71c72 *man/plot.acf.Rd
+f9e6072188f4d8fa84cbd032f879ceb8 *man/plot.acf.Rd
 3cbcadf1f88a7390f4b6e2acbb5f1a76 *man/plot.kmeans.Rd
 b8d86032fc9eb2a3774844d1ba098763 *man/plotTimesSeries.Rd
 e243e092923d6277d3cd6d6a70fe98f4 *man/pol2cart.Rd
@@ -110,5 +110,5 @@ e577d382bfd1c28f71c2be6b344d0d24 *tests/testthat/test-shiftColumn.r
 0961488db80440a2ea15a4d9a1563e73 *tests/testthat/test-simple-impute.r
 c3ed45e9acefece53a0bb74b0a74d2c2 *tests/testthat/test-sub-specials.r
 4d66f370c688d926856636ef93a99880 *tests/testthat/test-subMultiple.R
-c6935cc8e2f20fb9f90ae27a91d6f007 *tests/testthat/test-tsplot.r
+f0f1bf03e5105d2a86a3486419036d20 *tests/testthat/test-tsplot.r
 6b29a193cbc835ede6c91cc0429f7263 *tests/testthat/test-unique.R
