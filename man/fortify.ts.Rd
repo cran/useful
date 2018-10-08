@@ -4,14 +4,15 @@
 \alias{fortify.ts}
 \title{fortify.ts}
 \usage{
-\method{fortify}{ts}(model, data = NULL, name = as.character(m[[2]]), ...)
+\method{fortify}{ts}(model, data = NULL, name = as.character(m[[2]]),
+  ...)
 }
 \arguments{
 \item{model}{A \code{\link{ts}} object.}
 
 \item{data}{A vector of the same length of \code{x} that specifies the time component of each element of \code{x}.}
 
-\item{name}{Character specifying the name of x if it is to be different that the variable being inputed.}
+\item{name}{Character specifying the name of x if it is to be different than the variable being inputed.}
 
 \item{\dots}{Further arguments.}
 }

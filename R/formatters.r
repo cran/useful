@@ -11,9 +11,13 @@
 #' @export multiple
 #' @param x Vector of numbers to be formatted.
 #' @param multiple The multiple to display numbers in.  This symbol will be added to the end of the numbers.
-#' @param extra Function for perform any further formatting.
+#' @param big.mark Character specifying the thousands separator
+#' @param extra DEPRECATED, use `big.mark` and `prefix` instead: Function for perform any further formatting.
 #' @param digits Number of decimal places for rounding.
+#' @param prefix Symbol to put in front of the numbers such as a dollar sign.
+#' @param scientific Logical (default: `FALSE`) indicating if the numbers should be returned in scientific notation.
 #' @return Character vector of formatted numbers.
+#' @md
 #' @examples
 #' 
 #' require(scales)
@@ -27,8 +31,29 @@
 #' ggplot(diamonds, aes(x=x, y=y, color=price*100)) + geom_point() + 
 #' scale_color_gradient2(labels=multiple)
 #' 
-multiple <- function(x, multiple=c("K", "M", "B", "T", "H", "k", "m", "b", "t", "h"), extra=scales::comma, digits=0)
+multiple <- function(x, 
+                     multiple=c("K", "M", "B", "T", "H", "k", "m", "b", "t", "h"), 
+                     big.mark=',',
+                     extra, digits=0,
+                     prefix='',
+                     scientific=FALSE)
 {
+    assertthat::assert_that(is.numeric(x))
+    
+    if(!missing(extra) && is.function(extra))
+    {
+        big.mark <- dplyr::case_when(
+            identical(extra, scales::comma) ~ ',',
+            identical(extra, identity) ~ '',
+            TRUE ~ big.mark
+        )
+        
+        prefix <- dplyr::case_when(
+            identical(extra, scales::dollar) ~ '$',
+            TRUE ~ prefix
+        )
+    }
+    
     # get the multiple
     multiple=match.arg(multiple)
     
@@ -38,10 +63,11 @@ multiple <- function(x, multiple=c("K", "M", "B", "T", "H", "k", "m", "b", "t", 
     # get what we're dividing by
     divider <- dividers[toupper(multiple)]
     
-    x <- round(x / divider, digits=digits)
+    x <- purrr::map_dbl(x, ~ round(.x / divider, digits=digits))
+    # x <- format(x, digits=digits, big.mark=big.mark, scientific=scientific, trim=TRUE)
+    x <- purrr::map_chr(x, ~ format(.x, big.mark=big.mark, scientific=scientific, trim=TRUE))
     
-    x <- do.call(extra, args=list(x))
-    sprintf("%s%s", x, multiple)
+    sprintf("%s%s%s", prefix, x, multiple)
 }
 
 

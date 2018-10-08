@@ -4,17 +4,24 @@
 \alias{multiple}
 \title{multiple}
 \usage{
-multiple(x, multiple = c("K", "M", "B", "T", "H", "k", "m", "b", "t", "h"),
-  extra = scales::comma, digits = 0)
+multiple(x, multiple = c("K", "M", "B", "T", "H", "k", "m", "b", "t",
+  "h"), big.mark = ",", extra, digits = 0, prefix = "",
+  scientific = FALSE)
 }
 \arguments{
 \item{x}{Vector of numbers to be formatted.}
 
 \item{multiple}{The multiple to display numbers in.  This symbol will be added to the end of the numbers.}
 
-\item{extra}{Function for perform any further formatting.}
+\item{big.mark}{Character specifying the thousands separator}
+
+\item{extra}{DEPRECATED, use \code{big.mark} and \code{prefix} instead: Function for perform any further formatting.}
 
 \item{digits}{Number of decimal places for rounding.}
+
+\item{prefix}{Symbol to put in front of the numbers such as a dollar sign.}
+
+\item{scientific}{Logical (default: \code{FALSE}) indicating if the numbers should be returned in scientific notation.}
 }
 \value{
 Character vector of formatted numbers.
