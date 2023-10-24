@@ -1,4 +1,4 @@
-1f47bc6ca651d0b5c3c0b08fa7ac16e0 *DESCRIPTION
+df0183c71173e839fa91cacaccebb4c3 *DESCRIPTION
 f9abcf5410e2dac8d8dc6f334bc7056b *LICENSE
 680770f6e79ac81bde86a2f1586c64f7 *NAMESPACE
 3ace97749873cd34b59984c34a7954c3 *NEWS.md
@@ -29,7 +29,7 @@ c26ca21aa3ec402d4c860daefad35be7 *R/subspecials.r
 6221e1cd3390759fa63bfd76ef525ab8 *R/tsPlot.r
 7522ef188bd82427803f29ab224680c2 *R/unique.r
 700151e40929b26d23a387993c6ed363 *R/useful-package.r
-2f07b020a17af97ff6c66d6e43818d81 *README.md
+c04a877b9106bc36b8e0774383bb0e4a *README.md
 319ccace1c7b42165f168fcdc9be5c09 *man/ComputeHartigan.Rd
 9e0775d979619c267bd1800a9e8cd241 *man/FitKMeans.Rd
 5085e5d34418ddef2462783fea0909a1 *man/ForceDataFrame.Rd
@@ -109,7 +109,7 @@ ce552513a073800234b01c2fd5bbf453 *tests/testthat/test-coordinates.R
 ffe8095f36a2cf3b03714c6acb5f231f *tests/testthat/test-move-cols.r
 301ec5ba4c9638a96881686e2c66740b *tests/testthat/test-reclass.r
 8a1ef675d66a754f8b5bbf0f2294da2a *tests/testthat/test-regex.r
-e577d382bfd1c28f71c2be6b344d0d24 *tests/testthat/test-shiftColumn.r
+1e3ea29370452888215698222443a863 *tests/testthat/test-shiftColumn.r
 0961488db80440a2ea15a4d9a1563e73 *tests/testthat/test-simple-impute.r
 c3ed45e9acefece53a0bb74b0a74d2c2 *tests/testthat/test-sub-specials.r
 4d66f370c688d926856636ef93a99880 *tests/testthat/test-subMultiple.R
