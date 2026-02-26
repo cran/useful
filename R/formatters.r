@@ -10,14 +10,13 @@
 #' @aliases multiple
 #' @export multiple
 #' @param x Vector of numbers to be formatted.
-#' @param multiple The multiple to display numbers in.  This symbol will be added to the end of the numbers.
-#' @param big.mark Character specifying the thousands separator
-#' @param extra DEPRECATED, use `big.mark` and `prefix` instead: Function for perform any further formatting.
-#' @param digits Number of decimal places for rounding.
-#' @param prefix Symbol to put in front of the numbers such as a dollar sign.
-#' @param scientific Logical (default: `FALSE`) indicating if the numbers should be returned in scientific notation.
+#' @param multiple The multiple to display numbers in. This symbol will be added to the end of the numbers.
+#' @param extra Function for perform any further formatting.
+#' @param digits Number of decimal places for rounding. This does not 
+#' necessarily affect the number digits displayed, for this, supply 
+#' \code{accuracy} in the form of \code{accuracy=0.00001}.
+#' @param \dots Extra arguments passed to \code{extra}, such as \code{accuracy}.
 #' @return Character vector of formatted numbers.
-#' @md
 #' @examples
 #' 
 #' require(scales)
@@ -31,29 +30,8 @@
 #' ggplot(diamonds, aes(x=x, y=y, color=price*100)) + geom_point() + 
 #' scale_color_gradient2(labels=multiple)
 #' 
-multiple <- function(x, 
-                     multiple=c("K", "M", "B", "T", "H", "k", "m", "b", "t", "h"), 
-                     big.mark=',',
-                     extra, digits=0,
-                     prefix='',
-                     scientific=FALSE)
+multiple <- function(x, multiple=c("K", "M", "B", "T", "H", "k", "m", "b", "t", "h"), extra=scales::comma, digits=0, ...)
 {
-    assertthat::assert_that(is.numeric(x))
-    
-    if(!missing(extra) && is.function(extra))
-    {
-        big.mark <- dplyr::case_when(
-            identical(extra, scales::comma) ~ ',',
-            identical(extra, identity) ~ '',
-            TRUE ~ big.mark
-        )
-        
-        prefix <- dplyr::case_when(
-            identical(extra, scales::dollar) ~ '$',
-            TRUE ~ prefix
-        )
-    }
-    
     # get the multiple
     multiple=match.arg(multiple)
     
@@ -63,11 +41,16 @@ multiple <- function(x,
     # get what we're dividing by
     divider <- dividers[toupper(multiple)]
     
-    x <- purrr::map_dbl(x, ~ round(.x / divider, digits=digits))
-    # x <- format(x, digits=digits, big.mark=big.mark, scientific=scientific, trim=TRUE)
-    x <- purrr::map_chr(x, ~ format(.x, big.mark=big.mark, scientific=scientific, trim=TRUE))
+    x <- round(x / divider, digits=digits)
     
-    sprintf("%s%s%s", prefix, x, multiple)
+    # for some reason round no longer shows decimals if the number is an integer
+    # or it won't show 3 decimal places if the number only has 1
+    # so we need to pass the accuracy argument to the extra function
+    # if that argument even exists
+    # this won't work for things like identity
+    # so the special case of comma will just use format()
+    x <- do.call(extra, args=list(x, ...))
+    sprintf("%s%s", x, multiple)
 }
 
 
@@ -143,24 +126,25 @@ multiple.dollar <- function(x, ...)
 #' @aliases multiple.comma
 #' @export multiple.comma
 #' @param x Vector of numbers to be formatted.
-#' @param \dots Further arguments to be passed on to \code{link{multiple}}
+#' @param digits Number of decimal places for rounding.
+#' @param \dots Further arguments to be passed on to \code{\link{multiple}}
 #' @return Character vector of comma formatted numbers.
 #' @examples
 #' 
-#' require(scales)
+#' library(scales)
 #' vect <- c(1000, 1500, 23450, 21784, 875003780)
 #' multiple.comma(vect)
 #' multiple.comma(vect, multiple="k")
 #' multiple.comma(vect, multiple="h")
 #' 
-#' require(ggplot2)
+#' library(ggplot2)
 #' data(diamonds)
 #' ggplot(diamonds, aes(x=x, y=y, color=price*100)) + geom_point() + 
 #' scale_color_gradient2(labels=multiple.comma)
 #' 
-multiple.comma <- function(x, ...)
+multiple.comma <- function(x, digits=0, ...)
 {
-    multiple(x=x, extra=scales::comma, ...)
+    multiple(x=x, extra=scales::comma, digits=digits, accuracy=0.1^digits, ...)
 }
 
 

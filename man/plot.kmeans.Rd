@@ -4,10 +4,17 @@
 \alias{plot.kmeans}
 \title{plot.kmeans}
 \usage{
-\method{plot}{kmeans}(x, data = NULL, class = NULL, size = 2,
+\method{plot}{kmeans}(
+  x,
+  data = NULL,
+  class = NULL,
+  size = 2,
   legend.position = c("right", "bottom", "left", "top", "none"),
-  title = "K-Means Results", xlab = "Principal Component 1",
-  ylab = "Principal Component 2", ...)
+  title = "K-Means Results",
+  xlab = "Principal Component 1",
+  ylab = "Principal Component 2",
+  ...
+)
 }
 \arguments{
 \item{x}{A \code{\link{kmeans}} object.}
@@ -42,6 +49,7 @@ Plots the results of k-means with color-coding for the cluster membership.  If \
 k1 <- kmeans(x=iris[, 1:4], centers=3)
 plot(k1)
 plot(k1, data=iris)
+plot(k1, data=iris, class=Species)
 
 }
 \seealso{

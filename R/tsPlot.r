@@ -34,7 +34,7 @@ vplayout <- function(x, y)
 #' @return \code{\link{data.frame}} for plotting with ggplot.
 #' @param model A \code{\link{ts}} object.
 #' @param data A vector of the same length of \code{x} that specifies the time component of each element of \code{x}.
-#' @param name Character specifying the name of x if it is to be different than the variable being inputed.
+#' @param name Character specifying the name of x if it is to be different that the variable being inputed.
 #' @param \dots Further arguments.
 #' @examples
 #' 
@@ -95,7 +95,7 @@ ts.plotter <- function(data, time=NULL,
     y <- names(data)[2]
     
     # build the plot
-    ggplot(data, aes_string(x=x, y=y)) + geom_line(aes(group=1)) +
+    ggplot(data, aes(x=.data[[x]], y=.data[[y]])) + geom_line(aes(group=1)) +
         labs(title=title, x=xlab, y=ylab)
 }
 
@@ -177,8 +177,8 @@ autoplot.acf <- function(object,
     y <- names(data)[2]
     
     # build plot
-    ggplot(data, aes_string(x=x)) + 
-        geom_linerange(aes_string(ymin=pmin(y, 0), ymax=pmax(y, 0))) +
+    ggplot(data, aes(x=.data[[x]])) + 
+        geom_linerange(aes(ymin=pmin(.data[[y]], 0), ymax=pmax(.data[[y]], 0))) +
         labs(title=title, x=xlab, y=ylab)
 }
 
